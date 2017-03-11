@@ -1,0 +1,22 @@
+I, [2017-03-11T15:02:09.869406 #66906]  INFO -- default-centos: -----> Verifying <default-centos>...
+I, [2017-03-11T15:02:09.870187 #66906]  INFO -- default-centos: Preparing files for transfer
+I, [2017-03-11T15:02:10.186531 #66906]  INFO -- default-centos: -----> Busser installation detected (busser)
+I, [2017-03-11T15:02:10.187347 #66906]  INFO -- default-centos: Installing Busser plugins: busser-serverspec
+I, [2017-03-11T15:02:11.260894 #66906]  INFO -- default-centos: Plugin serverspec already installed
+I, [2017-03-11T15:02:11.508907 #66906]  INFO -- default-centos: Removing /tmp/verifier/suites/serverspec
+I, [2017-03-11T15:02:11.516856 #66906]  INFO -- default-centos: Transferring files to <default-centos>
+I, [2017-03-11T15:02:11.926426 #66906]  INFO -- default-centos: -----> Running serverspec test suite
+I, [2017-03-11T15:02:12.016624 #66906]  INFO -- default-centos: /opt/chef/embedded/bin/ruby -I/tmp/verifier/suites/serverspec -I/tmp/verifier/gems/gems/rspec-support-3.5.0/lib:/tmp/verifier/gems/gems/rspec-core-3.5.4/lib /opt/chef/embedded/bin/rspec --pattern /tmp/verifier/suites/serverspec/\*\*/\*_spec.rb --color --format documentation --default-path /tmp/verifier/suites/serverspec
+I, [2017-03-11T15:02:12.384383 #66906]  INFO -- default-centos: 
+I, [2017-03-11T15:02:12.384865 #66906]  INFO -- default-centos: Service "tomcat_helloworld"
+I, [2017-03-11T15:02:12.429283 #66906]  INFO -- default-centos: [32m  should be enabled[0m
+I, [2017-03-11T15:02:12.440627 #66906]  INFO -- default-centos: [32m  should be running[0m
+I, [2017-03-11T15:02:12.441061 #66906]  INFO -- default-centos: 
+I, [2017-03-11T15:02:12.441633 #66906]  INFO -- default-centos: Command "java -version"
+I, [2017-03-11T15:02:12.442427 #66906]  INFO -- default-centos:   exit_status
+I, [2017-03-11T15:02:12.542779 #66906]  INFO -- default-centos: [32m    should eq 0[0m
+I, [2017-03-11T15:02:12.543984 #66906]  INFO -- default-centos: 
+I, [2017-03-11T15:02:12.544486 #66906]  INFO -- default-centos: Finished in 0.15986 seconds (files took 0.32421 seconds to load)
+I, [2017-03-11T15:02:12.544981 #66906]  INFO -- default-centos: [32m3 examples, 0 failures[0m
+I, [2017-03-11T15:02:12.545272 #66906]  INFO -- default-centos: 
+I, [2017-03-11T15:02:12.572571 #66906]  INFO -- default-centos: Finished verifying <default-centos> (0m2.70s).

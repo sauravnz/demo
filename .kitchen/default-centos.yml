@@ -5,5 +5,5 @@ image_id: c199a6652e1e
 container_id: 323f44afd165e93132c5e38533741d7a9331f80d0baf6c625f5ca2c32d477609
 hostname: localhost
 port: 32788
-last_action: converge
+last_action: verify
 last_error: 
