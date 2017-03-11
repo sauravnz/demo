@@ -1,0 +1,29 @@
+D, [2017-03-08T16:43:45.717842 #47581] DEBUG -- default-centos7: Berksfile found at /Users/sasen/Documents/cookbooks/demo/Berksfile, loading Berkshelf
+D, [2017-03-08T16:43:47.040496 #47581] DEBUG -- default-centos7: Berkshelf 5.6.3 library loaded
+I, [2017-03-08T16:43:47.040958 #47581]  INFO -- default-centos7: -----> Creating <default-centos7>...
+E, [2017-03-08T16:43:47.073527 #47581] ERROR -- default-centos7: Create failed on instance <default-centos7>.
+E, [2017-03-08T16:43:47.073603 #47581] ERROR -- default-centos7: ------Exception-------
+E, [2017-03-08T16:43:47.073618 #47581] ERROR -- default-centos7: Class: Kitchen::ActionFailed
+E, [2017-03-08T16:43:47.073630 #47581] ERROR -- default-centos7: Message: Unknown platform 'centos7'
+E, [2017-03-08T16:43:47.073640 #47581] ERROR -- default-centos7: ----------------------
+E, [2017-03-08T16:43:47.073649 #47581] ERROR -- default-centos7: ------Backtrace-------
+E, [2017-03-08T16:43:47.073658 #47581] ERROR -- default-centos7: /Users/sasen/.chefdk/gem/ruby/2.3.0/gems/kitchen-docker-2.6.0/lib/kitchen/driver/docker.rb:249:in `build_dockerfile'
+E, [2017-03-08T16:43:47.073668 #47581] ERROR -- default-centos7: /Users/sasen/.chefdk/gem/ruby/2.3.0/gems/kitchen-docker-2.6.0/lib/kitchen/driver/docker.rb:285:in `dockerfile'
+E, [2017-03-08T16:43:47.073678 #47581] ERROR -- default-centos7: /Users/sasen/.chefdk/gem/ruby/2.3.0/gems/kitchen-docker-2.6.0/lib/kitchen/driver/docker.rb:304:in `build_image'
+E, [2017-03-08T16:43:47.073687 #47581] ERROR -- default-centos7: /Users/sasen/.chefdk/gem/ruby/2.3.0/gems/kitchen-docker-2.6.0/lib/kitchen/driver/docker.rb:122:in `create'
+E, [2017-03-08T16:43:47.073696 #47581] ERROR -- default-centos7: /Users/sasen/.chefdk/gem/ruby/2.3.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:460:in `public_send'
+E, [2017-03-08T16:43:47.073705 #47581] ERROR -- default-centos7: /Users/sasen/.chefdk/gem/ruby/2.3.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:460:in `block in perform_action'
+E, [2017-03-08T16:43:47.073715 #47581] ERROR -- default-centos7: /Users/sasen/.chefdk/gem/ruby/2.3.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:527:in `synchronize_or_call'
+E, [2017-03-08T16:43:47.073724 #47581] ERROR -- default-centos7: /Users/sasen/.chefdk/gem/ruby/2.3.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:489:in `block in action'
+E, [2017-03-08T16:43:47.073734 #47581] ERROR -- default-centos7: /opt/chefdk/embedded/lib/ruby/2.3.0/benchmark.rb:293:in `measure'
+E, [2017-03-08T16:43:47.073743 #47581] ERROR -- default-centos7: /Users/sasen/.chefdk/gem/ruby/2.3.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:488:in `action'
+E, [2017-03-08T16:43:47.073752 #47581] ERROR -- default-centos7: /Users/sasen/.chefdk/gem/ruby/2.3.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:460:in `perform_action'
+E, [2017-03-08T16:43:47.073762 #47581] ERROR -- default-centos7: /Users/sasen/.chefdk/gem/ruby/2.3.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:370:in `create_action'
+E, [2017-03-08T16:43:47.073771 #47581] ERROR -- default-centos7: /Users/sasen/.chefdk/gem/ruby/2.3.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:359:in `block in transition_to'
+E, [2017-03-08T16:43:47.073781 #47581] ERROR -- default-centos7: /Users/sasen/.chefdk/gem/ruby/2.3.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:358:in `each'
+E, [2017-03-08T16:43:47.073790 #47581] ERROR -- default-centos7: /Users/sasen/.chefdk/gem/ruby/2.3.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:358:in `transition_to'
+E, [2017-03-08T16:43:47.073800 #47581] ERROR -- default-centos7: /Users/sasen/.chefdk/gem/ruby/2.3.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:135:in `converge'
+E, [2017-03-08T16:43:47.073809 #47581] ERROR -- default-centos7: /Users/sasen/.chefdk/gem/ruby/2.3.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:197:in `public_send'
+E, [2017-03-08T16:43:47.073819 #47581] ERROR -- default-centos7: /Users/sasen/.chefdk/gem/ruby/2.3.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:197:in `run_action_in_thread'
+E, [2017-03-08T16:43:47.073828 #47581] ERROR -- default-centos7: /Users/sasen/.chefdk/gem/ruby/2.3.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2017-03-08T16:43:47.073843 #47581] ERROR -- default-centos7: ----End Backtrace-----

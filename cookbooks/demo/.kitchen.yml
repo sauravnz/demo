@@ -1,0 +1,26 @@
+---
+driver:
+  name: docker
+  use_sudo: false
+  privileged: true
+  run_command: /usr/sbin/init
+  require_chef_omnibus: true
+  forward:
+    - 80:8080
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: centos
+    image: centos:7
+    # driver_config:
+    #   dockerfile: test/Dockerfile
+    #   privileged: true # Needed by systemd to access cgroups
+    #   run_command: /usr/sbin/init # Start systemd as root process
+    #   use_sudo: false
+    #   ssh_key: ~/.ssh/id_rsa
+
+suites:
+  - name: default
+    run_list: [demo]
