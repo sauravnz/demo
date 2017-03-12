@@ -1,4 +1,0 @@
----
-username: kitchen
-ssh_key: "/Users/sasen/Documents/cookbooks/demo/.kitchen/docker_id_rsa"
-last_error: Kitchen::ActionFailed
