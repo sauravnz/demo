@@ -7,6 +7,10 @@ RSpec.configure do |c|
   end
 end
 
+describe user('tomcat') do
+  it { should belong_to_group 'tomcat' }
+end
+
 describe service('tomcat_helloworld') do
   it { should be_enabled }
   it { should be_running }
