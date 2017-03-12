@@ -1,22 +1,146 @@
-I, [2017-03-11T15:02:09.869406 #66906]  INFO -- default-centos: -----> Verifying <default-centos>...
-I, [2017-03-11T15:02:09.870187 #66906]  INFO -- default-centos: Preparing files for transfer
-I, [2017-03-11T15:02:10.186531 #66906]  INFO -- default-centos: -----> Busser installation detected (busser)
-I, [2017-03-11T15:02:10.187347 #66906]  INFO -- default-centos: Installing Busser plugins: busser-serverspec
-I, [2017-03-11T15:02:11.260894 #66906]  INFO -- default-centos: Plugin serverspec already installed
-I, [2017-03-11T15:02:11.508907 #66906]  INFO -- default-centos: Removing /tmp/verifier/suites/serverspec
-I, [2017-03-11T15:02:11.516856 #66906]  INFO -- default-centos: Transferring files to <default-centos>
-I, [2017-03-11T15:02:11.926426 #66906]  INFO -- default-centos: -----> Running serverspec test suite
-I, [2017-03-11T15:02:12.016624 #66906]  INFO -- default-centos: /opt/chef/embedded/bin/ruby -I/tmp/verifier/suites/serverspec -I/tmp/verifier/gems/gems/rspec-support-3.5.0/lib:/tmp/verifier/gems/gems/rspec-core-3.5.4/lib /opt/chef/embedded/bin/rspec --pattern /tmp/verifier/suites/serverspec/\*\*/\*_spec.rb --color --format documentation --default-path /tmp/verifier/suites/serverspec
-I, [2017-03-11T15:02:12.384383 #66906]  INFO -- default-centos: 
-I, [2017-03-11T15:02:12.384865 #66906]  INFO -- default-centos: Service "tomcat_helloworld"
-I, [2017-03-11T15:02:12.429283 #66906]  INFO -- default-centos: [32m  should be enabled[0m
-I, [2017-03-11T15:02:12.440627 #66906]  INFO -- default-centos: [32m  should be running[0m
-I, [2017-03-11T15:02:12.441061 #66906]  INFO -- default-centos: 
-I, [2017-03-11T15:02:12.441633 #66906]  INFO -- default-centos: Command "java -version"
-I, [2017-03-11T15:02:12.442427 #66906]  INFO -- default-centos:   exit_status
-I, [2017-03-11T15:02:12.542779 #66906]  INFO -- default-centos: [32m    should eq 0[0m
-I, [2017-03-11T15:02:12.543984 #66906]  INFO -- default-centos: 
-I, [2017-03-11T15:02:12.544486 #66906]  INFO -- default-centos: Finished in 0.15986 seconds (files took 0.32421 seconds to load)
-I, [2017-03-11T15:02:12.544981 #66906]  INFO -- default-centos: [32m3 examples, 0 failures[0m
-I, [2017-03-11T15:02:12.545272 #66906]  INFO -- default-centos: 
-I, [2017-03-11T15:02:12.572571 #66906]  INFO -- default-centos: Finished verifying <default-centos> (0m2.70s).
+I, [2017-03-11T18:10:32.077094 #70699]  INFO -- default-centos: -----> Converging <default-centos>...
+I, [2017-03-11T18:10:32.080687 #70699]  INFO -- default-centos: Preparing files for transfer
+I, [2017-03-11T18:10:32.080796 #70699]  INFO -- default-centos: Preparing dna.json
+I, [2017-03-11T18:10:32.081159 #70699]  INFO -- default-centos: Resolving cookbook dependencies with Berkshelf 5.6.3...
+I, [2017-03-11T18:10:34.101344 #70699]  INFO -- default-centos: Removing non-cookbook files before transfer
+I, [2017-03-11T18:10:34.142369 #70699]  INFO -- default-centos: Preparing nodes
+I, [2017-03-11T18:10:34.143240 #70699]  INFO -- default-centos: Preparing validation.pem
+I, [2017-03-11T18:10:34.145193 #70699]  INFO -- default-centos: Preparing client.rb
+I, [2017-03-11T18:10:34.270401 #70699]  INFO -- default-centos: Transferring files to <default-centos>
+I, [2017-03-11T18:10:36.303920 #70699]  INFO -- default-centos: [2017-03-09T14:06:47+00:00] INFO: Forking chef instance to converge...
+I, [2017-03-11T18:10:36.341400 #70699]  INFO -- default-centos: Starting Chef Client, version 12.19.36
+I, [2017-03-11T18:10:36.342167 #70699]  INFO -- default-centos: [2017-03-09T14:06:47+00:00] INFO: *** Chef 12.19.36 ***
+I, [2017-03-11T18:10:36.342686 #70699]  INFO -- default-centos: [2017-03-09T14:06:47+00:00] INFO: Platform: x86_64-linux
+I, [2017-03-11T18:10:36.343225 #70699]  INFO -- default-centos: [2017-03-09T14:06:47+00:00] INFO: Chef-client pid: 4310
+I, [2017-03-11T18:10:37.582655 #70699]  INFO -- default-centos: [2017-03-09T14:06:48+00:00] WARN: Plugin Network: unable to detect ipaddress
+I, [2017-03-11T18:10:38.003172 #70699]  INFO -- default-centos: [2017-03-09T14:06:49+00:00] INFO: Setting the run_list to ["demo"] from CLI options
+I, [2017-03-11T18:10:38.009380 #70699]  INFO -- default-centos: [2017-03-09T14:06:49+00:00] INFO: Run List is [recipe[demo]]
+I, [2017-03-11T18:10:38.009922 #70699]  INFO -- default-centos: [2017-03-09T14:06:49+00:00] INFO: Run List expands to [demo]
+I, [2017-03-11T18:10:38.010398 #70699]  INFO -- default-centos: [2017-03-09T14:06:49+00:00] INFO: Starting Chef Run for default-centos
+I, [2017-03-11T18:10:38.010885 #70699]  INFO -- default-centos: [2017-03-09T14:06:49+00:00] INFO: Running start handlers
+I, [2017-03-11T18:10:38.011435 #70699]  INFO -- default-centos: [2017-03-09T14:06:49+00:00] INFO: Start handlers complete.
+I, [2017-03-11T18:10:38.013095 #70699]  INFO -- default-centos: [2017-03-09T14:06:49+00:00] INFO: HTTP Request Returned 404 Not Found: Object not found: 
+I, [2017-03-11T18:10:38.013796 #70699]  INFO -- default-centos: resolving cookbooks for run list: ["demo"]
+I, [2017-03-11T18:10:38.318380 #70699]  INFO -- default-centos: [2017-03-09T14:06:49+00:00] INFO: Loading cookbooks [demo@0.1.0, java@1.47.0, tomcat@2.3.4, apt@6.0.1, windows@2.1.1, homebrew@3.0.0, compat_resource@12.16.3, ohai@5.0.0]
+I, [2017-03-11T18:10:38.347004 #70699]  INFO -- default-centos: Synchronizing Cookbooks:
+I, [2017-03-11T18:10:38.352485 #70699]  INFO -- default-centos: [2017-03-09T14:06:49+00:00] INFO: Storing updated cookbooks/demo/files/default/helloworld_server.xml in the cache.
+I, [2017-03-11T18:10:38.357951 #70699]  INFO -- default-centos:   - tomcat (2.3.4)
+I, [2017-03-11T18:10:38.366817 #70699]  INFO -- default-centos:   - homebrew (3.0.0)
+I, [2017-03-11T18:10:38.378195 #70699]  INFO -- default-centos:   - ohai (5.0.0)
+I, [2017-03-11T18:10:38.378964 #70699]  INFO -- default-centos:   - demo (0.1.0)
+I, [2017-03-11T18:10:38.379919 #70699]  INFO -- default-centos:   - apt (6.0.1)
+I, [2017-03-11T18:10:38.380655 #70699]  INFO -- default-centos:   - java (1.47.0)
+I, [2017-03-11T18:10:38.381652 #70699]  INFO -- default-centos:   - windows (2.1.1)
+I, [2017-03-11T18:10:38.383597 #70699]  INFO -- default-centos:   - compat_resource (12.16.3)
+I, [2017-03-11T18:10:38.386171 #70699]  INFO -- default-centos: Installing Cookbook Gems:
+I, [2017-03-11T18:10:38.386502 #70699]  INFO -- default-centos: Compiling Cookbooks...
+I, [2017-03-11T18:10:38.510036 #70699]  INFO -- default-centos: Converging 11 resources
+I, [2017-03-11T18:10:38.511523 #70699]  INFO -- default-centos: Recipe: java::notify
+I, [2017-03-11T18:10:38.513108 #70699]  INFO -- default-centos:   * log[jdk-version-changed] action nothing[2017-03-09T14:06:49+00:00] INFO: Processing log[jdk-version-changed] action nothing (java::notify line 29)
+I, [2017-03-11T18:10:38.513471 #70699]  INFO -- default-centos:  (skipped due to action :nothing)
+I, [2017-03-11T18:10:38.513804 #70699]  INFO -- default-centos: Recipe: java::set_java_home
+I, [2017-03-11T18:10:38.514635 #70699]  INFO -- default-centos:   * directory[/etc/profile.d] action create[2017-03-09T14:06:49+00:00] INFO: Processing directory[/etc/profile.d] action create (java::set_java_home line 19)
+I, [2017-03-11T18:10:38.519967 #70699]  INFO -- default-centos:  (up to date)
+I, [2017-03-11T18:10:38.521164 #70699]  INFO -- default-centos:   * template[/etc/profile.d/jdk.sh] action create[2017-03-09T14:06:49+00:00] INFO: Processing template[/etc/profile.d/jdk.sh] action create (java::set_java_home line 23)
+I, [2017-03-11T18:10:38.528975 #70699]  INFO -- default-centos:  (up to date)
+I, [2017-03-11T18:10:38.529684 #70699]  INFO -- default-centos: Recipe: java::oracle
+I, [2017-03-11T18:10:38.530492 #70699]  INFO -- default-centos:   * yum_package[tar] action install[2017-03-09T14:06:49+00:00] INFO: Processing yum_package[tar] action install (java::oracle line 55)
+I, [2017-03-11T18:10:39.487623 #70699]  INFO -- default-centos:  (up to date)
+I, [2017-03-11T18:10:39.489109 #70699]  INFO -- default-centos:   * java_ark[jdk] action install[2017-03-09T14:06:50+00:00] INFO: Processing java_ark[jdk] action install (java::oracle line 59)
+I, [2017-03-11T18:10:39.490699 #70699]  INFO -- default-centos:  (up to date)
+I, [2017-03-11T18:10:39.492000 #70699]  INFO -- default-centos:   * java_alternatives[set-java-alternatives] action set[2017-03-09T14:06:50+00:00] INFO: Processing java_alternatives[set-java-alternatives] action set (/tmp/kitchen/cache/cookbooks/java/providers/ark.rb line 222)
+I, [2017-03-11T18:10:42.290089 #70699]  INFO -- default-centos:  (up to date)
+I, [2017-03-11T18:10:42.290741 #70699]  INFO -- default-centos: Recipe: demo::default
+I, [2017-03-11T18:10:42.292138 #70699]  INFO -- default-centos:   * linux_user[tomcat] action create[2017-03-09T14:06:53+00:00] INFO: Processing linux_user[tomcat] action create (demo::default line 13)
+I, [2017-03-11T18:10:42.294039 #70699]  INFO -- default-centos:  (up to date)
+I, [2017-03-11T18:10:42.295149 #70699]  INFO -- default-centos:   * group[tomcat] action create[2017-03-09T14:06:53+00:00] INFO: Processing group[tomcat] action create (demo::default line 16)
+I, [2017-03-11T18:10:42.296920 #70699]  INFO -- default-centos:  (up to date)
+I, [2017-03-11T18:10:42.298101 #70699]  INFO -- default-centos:   * tomcat_install[helloworld] action install[2017-03-09T14:06:53+00:00] INFO: Processing tomcat_install[helloworld] action install (demo::default line 22)
+I, [2017-03-11T18:10:42.314127 #70699]  INFO -- default-centos: 
+I, [2017-03-11T18:10:42.315036 #70699]  INFO -- default-centos:     * yum_package[tar] action install[2017-03-09T14:06:53+00:00] INFO: Processing yum_package[tar] action install (/tmp/kitchen/cache/cookbooks/tomcat/resources/install.rb line 100)
+I, [2017-03-11T18:10:42.317391 #70699]  INFO -- default-centos:  (up to date)
+I, [2017-03-11T18:10:42.319202 #70699]  INFO -- default-centos:     * group[tomcat] action create[2017-03-09T14:06:53+00:00] INFO: Processing group[tomcat] action create (/tmp/kitchen/cache/cookbooks/tomcat/resources/install.rb line 102)
+I, [2017-03-11T18:10:42.321292 #70699]  INFO -- default-centos:  (up to date)
+I, [2017-03-11T18:10:42.322459 #70699]  INFO -- default-centos:     * linux_user[tomcat] action create[2017-03-09T14:06:53+00:00] INFO: Processing linux_user[tomcat] action create (/tmp/kitchen/cache/cookbooks/tomcat/resources/install.rb line 107)
+I, [2017-03-11T18:10:42.324660 #70699]  INFO -- default-centos:  (up to date)
+I, [2017-03-11T18:10:42.326751 #70699]  INFO -- default-centos:     * directory[tomcat install dir] action create[2017-03-09T14:06:53+00:00] INFO: Processing directory[tomcat install dir] action create (/tmp/kitchen/cache/cookbooks/tomcat/resources/install.rb line 114)
+I, [2017-03-11T18:10:42.330346 #70699]  INFO -- default-centos:  (up to date)
+I, [2017-03-11T18:10:42.331453 #70699]  INFO -- default-centos:     * remote_file[apache 8.0.36 tarball] action create[2017-03-09T14:06:53+00:00] INFO: Processing remote_file[apache 8.0.36 tarball] action create (/tmp/kitchen/cache/cookbooks/tomcat/resources/install.rb line 122)
+I, [2017-03-11T18:10:42.684304 #70699]  INFO -- default-centos:  (up to date)
+I, [2017-03-11T18:10:42.685734 #70699]  INFO -- default-centos:     * execute[extract tomcat tarball] action run[2017-03-09T14:06:53+00:00] INFO: Processing execute[extract tomcat tarball] action run (/tmp/kitchen/cache/cookbooks/tomcat/resources/install.rb line 128)
+I, [2017-03-11T18:10:42.686507 #70699]  INFO -- default-centos:  (up to date)
+I, [2017-03-11T18:10:42.687585 #70699]  INFO -- default-centos:     * execute[chown install dir as tomcat_helloworld] action run[2017-03-09T14:06:53+00:00] INFO: Processing execute[chown install dir as tomcat_helloworld] action run (/tmp/kitchen/cache/cookbooks/tomcat/resources/install.rb line 135)
+I, [2017-03-11T18:10:42.688273 #70699]  INFO -- default-centos:  (skipped due to not_if)
+I, [2017-03-11T18:10:42.689404 #70699]  INFO -- default-centos:     * link[/opt/tomcat_helloworld] action create[2017-03-09T14:06:53+00:00] INFO: Processing link[/opt/tomcat_helloworld] action create (/tmp/kitchen/cache/cookbooks/tomcat/resources/install.rb line 142)
+I, [2017-03-11T18:10:42.691034 #70699]  INFO -- default-centos:  (up to date)
+I, [2017-03-11T18:10:42.691599 #70699]  INFO -- default-centos:      (up to date)
+I, [2017-03-11T18:10:42.692716 #70699]  INFO -- default-centos:   * cookbook_file[/opt/tomcat_helloworld/conf/server.xml] action create[2017-03-09T14:06:54+00:00] INFO: Processing cookbook_file[/opt/tomcat_helloworld/conf/server.xml] action create (demo::default line 29)
+I, [2017-03-11T18:10:42.697913 #70699]  INFO -- default-centos: [2017-03-09T14:06:54+00:00] INFO: cookbook_file[/opt/tomcat_helloworld/conf/server.xml] backed up to /tmp/kitchen/backup/opt/tomcat_helloworld/conf/server.xml.chef-20170309140654.005710
+I, [2017-03-11T18:10:42.699125 #70699]  INFO -- default-centos: [2017-03-09T14:06:54+00:00] INFO: cookbook_file[/opt/tomcat_helloworld/conf/server.xml] updated file contents /opt/tomcat_helloworld/conf/server.xml
+I, [2017-03-11T18:10:42.700940 #70699]  INFO -- default-centos: 
+I, [2017-03-11T18:10:42.701455 #70699]  INFO -- default-centos:     - update content in file /opt/tomcat_helloworld/conf/server.xml from c9620b to d91e9e
+I, [2017-03-11T18:10:42.702375 #70699]  INFO -- default-centos:     --- /opt/tomcat_helloworld/conf/server.xml	2017-03-09 10:42:57.006066260 +0000
+I, [2017-03-11T18:10:42.702930 #70699]  INFO -- default-centos:     +++ /opt/tomcat_helloworld/conf/.chef-server20170309-4310-ue00c8.xml	2017-03-09 14:06:53.986066260 +0000
+I, [2017-03-11T18:10:42.703321 #70699]  INFO -- default-centos:     @@ -66,7 +66,7 @@
+I, [2017-03-11T18:10:42.703769 #70699]  INFO -- default-centos:        APR (HTTP/AJP) Connector: /docs/apr.html
+I, [2017-03-11T18:10:42.704191 #70699]  INFO -- default-centos:        Define a non-SSL/TLS HTTP/1.1 Connector on port 8080
+I, [2017-03-11T18:10:42.704620 #70699]  INFO -- default-centos:   -->
+I, [2017-03-11T18:10:42.705052 #70699]  INFO -- default-centos:     -    <Connector port="8080" protocol="HTTP/1.1"
+I, [2017-03-11T18:10:42.706108 #70699]  INFO -- default-centos:     +    <Connector port="8081" protocol="HTTP/1.1"
+I, [2017-03-11T18:10:42.706349 #70699]  INFO -- default-centos:              connectionTimeout="20000"
+I, [2017-03-11T18:10:42.707822 #70699]  INFO -- default-centos:              redirectPort="8444" />
+I, [2017-03-11T18:10:42.709832 #70699]  INFO -- default-centos:   <!-- A "Connector" using the shared thread pool-->
+I, [2017-03-11T18:10:42.710931 #70699]  INFO -- default-centos:   * remote_file[/opt/tomcat_helloworld/webapps/sample.war] action create[2017-03-09T14:06:54+00:00] INFO: Processing remote_file[/opt/tomcat_helloworld/webapps/sample.war] action create (demo::default line 37)
+I, [2017-03-11T18:10:42.715248 #70699]  INFO -- default-centos:  (up to date)
+I, [2017-03-11T18:10:42.716910 #70699]  INFO -- default-centos:   * tomcat_service_systemd[helloworld] action start[2017-03-09T14:06:54+00:00] INFO: Processing tomcat_service_systemd[helloworld] action start (demo::default line 45)
+I, [2017-03-11T18:10:42.729175 #70699]  INFO -- default-centos: 
+I, [2017-03-11T18:10:42.730229 #70699]  INFO -- default-centos:     * template[/etc/systemd/system/tomcat_helloworld.service] action create[2017-03-09T14:06:54+00:00] INFO: Processing template[/etc/systemd/system/tomcat_helloworld.service] action create (/tmp/kitchen/cache/cookbooks/tomcat/resources/service_systemd.rb line 82)
+I, [2017-03-11T18:10:42.737114 #70699]  INFO -- default-centos:  (up to date)
+I, [2017-03-11T18:10:42.738084 #70699]  INFO -- default-centos:     * execute[Load systemd unit file] action nothing[2017-03-09T14:06:54+00:00] INFO: Processing execute[Load systemd unit file] action nothing (/tmp/kitchen/cache/cookbooks/tomcat/resources/service_systemd.rb line 100)
+I, [2017-03-11T18:10:42.738991 #70699]  INFO -- default-centos:  (skipped due to action :nothing)
+I, [2017-03-11T18:10:42.740196 #70699]  INFO -- default-centos:     * service[tomcat_helloworld] action start[2017-03-09T14:06:54+00:00] INFO: Processing service[tomcat_helloworld] action start (/tmp/kitchen/cache/cookbooks/tomcat/resources/service_systemd.rb line 33)
+I, [2017-03-11T18:10:42.865919 #70699]  INFO -- default-centos:  (up to date)
+I, [2017-03-11T18:10:42.866473 #70699]  INFO -- default-centos:      (up to date)
+I, [2017-03-11T18:10:42.867521 #70699]  INFO -- default-centos:   * tomcat_service_systemd[helloworld] action enable[2017-03-09T14:06:54+00:00] INFO: Processing tomcat_service_systemd[helloworld] action enable (demo::default line 45)
+I, [2017-03-11T18:10:42.869744 #70699]  INFO -- default-centos: 
+I, [2017-03-11T18:10:42.870805 #70699]  INFO -- default-centos:     * template[/etc/systemd/system/tomcat_helloworld.service] action create[2017-03-09T14:06:54+00:00] INFO: Processing template[/etc/systemd/system/tomcat_helloworld.service] action create (/tmp/kitchen/cache/cookbooks/tomcat/resources/service_systemd.rb line 82)
+I, [2017-03-11T18:10:42.875922 #70699]  INFO -- default-centos:  (up to date)
+I, [2017-03-11T18:10:42.876967 #70699]  INFO -- default-centos:     * execute[Load systemd unit file] action nothing[2017-03-09T14:06:54+00:00] INFO: Processing execute[Load systemd unit file] action nothing (/tmp/kitchen/cache/cookbooks/tomcat/resources/service_systemd.rb line 100)
+I, [2017-03-11T18:10:42.877527 #70699]  INFO -- default-centos:  (skipped due to action :nothing)
+I, [2017-03-11T18:10:42.878786 #70699]  INFO -- default-centos:     * service[tomcat_helloworld] action enable[2017-03-09T14:06:54+00:00] INFO: Processing service[tomcat_helloworld] action enable (/tmp/kitchen/cache/cookbooks/tomcat/resources/service_systemd.rb line 70)
+I, [2017-03-11T18:10:42.968513 #70699]  INFO -- default-centos:  (up to date)
+I, [2017-03-11T18:10:42.969068 #70699]  INFO -- default-centos:      (up to date)
+I, [2017-03-11T18:10:42.969732 #70699]  INFO -- default-centos: [2017-03-09T14:06:54+00:00] INFO: cookbook_file[/opt/tomcat_helloworld/conf/server.xml] sending restart action to tomcat_service_systemd[helloworld] (delayed)
+I, [2017-03-11T18:10:42.971112 #70699]  INFO -- default-centos:   * tomcat_service_systemd[helloworld] action restart[2017-03-09T14:06:54+00:00] INFO: Processing tomcat_service_systemd[helloworld] action restart (demo::default line 45)
+I, [2017-03-11T18:10:42.972062 #70699]  INFO -- default-centos: 
+I, [2017-03-11T18:10:42.972902 #70699]  INFO -- default-centos:     * service[tomcat_helloworld] action restart[2017-03-09T14:06:54+00:00] INFO: Processing service[tomcat_helloworld] action restart (/tmp/kitchen/cache/cookbooks/tomcat/resources/service_systemd.rb line 51)
+I, [2017-03-11T18:10:43.479404 #70699]  INFO -- default-centos: [2017-03-09T14:06:54+00:00] INFO: service[tomcat_helloworld] restarted
+I, [2017-03-11T18:10:43.479711 #70699]  INFO -- default-centos: 
+I, [2017-03-11T18:10:43.481184 #70699]  INFO -- default-centos:       - restart service service[tomcat_helloworld]
+I, [2017-03-11T18:10:43.481874 #70699]  INFO -- default-centos:   
+I, [2017-03-11T18:10:43.526829 #70699]  INFO -- default-centos: [2017-03-09T14:06:54+00:00] INFO: Chef Run complete in 5.5108121 seconds
+I, [2017-03-11T18:10:43.551210 #70699]  INFO -- default-centos: 
+I, [2017-03-11T18:10:43.556881 #70699]  INFO -- default-centos: Running handlers:
+I, [2017-03-11T18:10:43.561606 #70699]  INFO -- default-centos: [2017-03-09T14:06:54+00:00] INFO: Running report handlers
+I, [2017-03-11T18:10:43.561977 #70699]  INFO -- default-centos: Running handlers complete
+I, [2017-03-11T18:10:43.562489 #70699]  INFO -- default-centos: [2017-03-09T14:06:54+00:00] INFO: Report handlers complete
+I, [2017-03-11T18:10:43.562780 #70699]  INFO -- default-centos: 
+I, [2017-03-11T18:10:43.563467 #70699]  INFO -- default-centos: Deprecated features used!
+I, [2017-03-11T18:10:43.564856 #70699]  INFO -- default-centos:   Property `retries` of resource `java_ark` overwrites an existing method. Please use a different property name. This will raise an exception in Chef 13. at 1 location:
+I, [2017-03-11T18:10:43.565357 #70699]  INFO -- default-centos:     - /tmp/kitchen/cache/cookbooks/java/resources/ark.rb:46:in `class_from_file'
+I, [2017-03-11T18:10:43.566055 #70699]  INFO -- default-centos:    See https://docs.chef.io/deprecations_property_name_collision.html for further details.
+I, [2017-03-11T18:10:43.566659 #70699]  INFO -- default-centos:   Property `retry_delay` of resource `java_ark` overwrites an existing method. Please use a different property name. This will raise an exception in Chef 13. at 1 location:
+I, [2017-03-11T18:10:43.567417 #70699]  INFO -- default-centos:     - /tmp/kitchen/cache/cookbooks/java/resources/ark.rb:47:in `class_from_file'
+I, [2017-03-11T18:10:43.568840 #70699]  INFO -- default-centos:    See https://docs.chef.io/deprecations_property_name_collision.html for further details.
+I, [2017-03-11T18:10:43.569306 #70699]  INFO -- default-centos:   Property `sensitive` of resource `tomcat_service_systemd` overwrites an existing method. Please use a different property name. This will raise an exception in Chef 13. at 1 location:
+I, [2017-03-11T18:10:43.569542 #70699]  INFO -- default-centos:     - /tmp/kitchen/cache/cookbooks/tomcat/resources/service_systemd.rb:28:in `class_from_file'
+I, [2017-03-11T18:10:43.569926 #70699]  INFO -- default-centos:    See https://docs.chef.io/deprecations_property_name_collision.html for further details.
+I, [2017-03-11T18:10:43.570626 #70699]  INFO -- default-centos:   Property `sensitive` of resource `tomcat_service_sysv_init` overwrites an existing method. Please use a different property name. This will raise an exception in Chef 13. at 1 location:
+I, [2017-03-11T18:10:43.571266 #70699]  INFO -- default-centos:     - /tmp/kitchen/cache/cookbooks/tomcat/resources/service_sysv_init.rb:21:in `class_from_file'
+I, [2017-03-11T18:10:43.572265 #70699]  INFO -- default-centos:    See https://docs.chef.io/deprecations_property_name_collision.html for further details.
+I, [2017-03-11T18:10:43.573330 #70699]  INFO -- default-centos:   Property `sensitive` of resource `tomcat_service_upstart` overwrites an existing method. Please use a different property name. This will raise an exception in Chef 13. at 1 location:
+I, [2017-03-11T18:10:43.573586 #70699]  INFO -- default-centos:     - /tmp/kitchen/cache/cookbooks/tomcat/resources/service_upstart.rb:15:in `class_from_file'
+I, [2017-03-11T18:10:43.573811 #70699]  INFO -- default-centos:    See https://docs.chef.io/deprecations_property_name_collision.html for further details.
+I, [2017-03-11T18:10:43.577629 #70699]  INFO -- default-centos: 
+I, [2017-03-11T18:10:43.580911 #70699]  INFO -- default-centos: Chef Client finished, 3/29 resources updated in 07 seconds
+I, [2017-03-11T18:10:43.751784 #70699]  INFO -- default-centos: Finished converging <default-centos> (0m11.67s).
