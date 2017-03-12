@@ -20,9 +20,10 @@ describe command('java -version') do
   its(:exit_status) { should eq 0 }
 end
 
-# describe file('/apps/install/tomcat7/bin/catalina.sh') do
-#   its(:content) { should match p(/-Xms2048m -Xmx2048m -Xmn1g -Xss256k -XX:ParallelGCThreads=2/) }
-# end
+describe file('/opt/tomcat_helloworld/webapps/sample.war') do
+  it { should exist }
+  it { should be_owned_by 'tomcat' }
+end
 #
 # describe file('/apps/tomcat/instances/tomcat01/conf/logging.properties') do
 #   its(:content) { should match p(/INFO/) }
