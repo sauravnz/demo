@@ -4,16 +4,21 @@ driver:
   use_sudo: false
   privileged: true
   run_command: /usr/sbin/init
-  require_chef_omnibus: true
-  forward:
-    - 80:8080
+  require_chef_omnibus: false
+  # forward:
+  #   - 8081:8081
 
 provisioner:
   name: chef_zero
 
+transport:
+  username: kitchen
+
 platforms:
   - name: centos
-    image: centos:7
+    driver_config:
+      image: "centos_chef_omnibus:latest"
+      platform: "centos"
     # driver_config:
     #   dockerfile: test/Dockerfile
     #   privileged: true # Needed by systemd to access cgroups

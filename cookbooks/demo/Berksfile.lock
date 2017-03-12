@@ -5,13 +5,17 @@ DEPENDENCIES
 
 GRAPH
   apt (6.0.1)
+  compat_resource (12.16.3)
   demo (0.1.0)
     java (>= 0.0.0)
+    tomcat (>= 0.0.0)
   homebrew (3.0.0)
   java (1.47.0)
     apt (>= 0.0.0)
     homebrew (>= 0.0.0)
     windows (>= 0.0.0)
   ohai (5.0.0)
+  tomcat (2.3.4)
+    compat_resource (>= 12.16)
   windows (2.1.1)
     ohai (>= 4.0.0)
