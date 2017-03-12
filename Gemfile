@@ -2,10 +2,16 @@ source 'https://rubygems.org'
 
 gem 'chef'
 
-group :unit do
-  gem 'chefspec'
-  gem 'rspec'
-  gem 'serverspec'
+group :development do
+  gem 'berkshelf'
+  gem 'guard'
+  gem 'guard-rake'
+  gem 'rake'
+end
+
+group :integration do
+  gem 'kitchen-docker'
+  gem 'test-kitchen'
 end
 
 group :style do
@@ -13,14 +19,8 @@ group :style do
   gem 'rubocop'
 end
 
-group :development do
-  gem 'berkshelf'
-  gem 'rake'
-  gem 'guard'
-  gem 'guard-rake'
-end
-
-group :integration do
-  gem 'test-kitchen'
-  gem 'kitchen-docker'
+group :unit do
+  gem 'chefspec'
+  gem 'rspec'
+  gem 'serverspec'
 end
