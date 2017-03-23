@@ -8,6 +8,11 @@ SpaceBeforeFirstArg:
   Exclude:
     - "**/metadata.rb"
 
+Metrics/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+
 AllCops:
   Exclude:
     - "Vagrantfile"
@@ -16,3 +21,5 @@ AllCops:
     - "Berksfile"
     - ".kitchen/**"
     - test/**/*
+    - cookbooks/**/*
+    -

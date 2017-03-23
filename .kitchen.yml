@@ -5,8 +5,8 @@ driver:
   privileged: true
   run_command: /usr/sbin/init
   require_chef_omnibus: false
-  # forward:
-  #   - 8081:8081
+  forward:
+    - 8081:8081
 
 provisioner:
   name: chef_zero

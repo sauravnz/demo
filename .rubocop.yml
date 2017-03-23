@@ -8,11 +8,11 @@ SpaceBeforeFirstArg:
   Exclude:
     - "**/metadata.rb"
 
-Style/BlockLength:
+Metrics/BlockLength:
   Exclude:
     - 'Rakefile'
     - '**/*.rake'
-    
+
 AllCops:
   Exclude:
     - "Vagrantfile"
