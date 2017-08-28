@@ -30,3 +30,6 @@ suites:
   - name: default
     run_list:
       - recipe[demo::default]
+  - name: mytest
+    run_list:
+      - recipe[mytest]
