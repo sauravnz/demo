@@ -28,4 +28,5 @@ platforms:
 
 suites:
   - name: default
-    run_list: [demo]
+    run_list:
+      - recipe[demo::default]

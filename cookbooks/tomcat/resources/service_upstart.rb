@@ -1,8 +1,27 @@
+#
+# Cookbook:: tomcat
+# Resource:: service_upstart
+#
+# Copyright:: 2016-2017, Chef Software, Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
 
 provides :tomcat_service_upstart
 
-provides :tomcat_service, platform: 'ubuntu' do |node|
-  node['platform_version'].to_f < 15.10
+provides :tomcat_service, platform_family: 'debian' do |_node|
+  Chef::Platform::ServiceHelpers.service_resource_providers.include?(:upstart) &&
+    !Chef::Platform::ServiceHelpers.service_resource_providers.include?(:systemd)
 end
 
 property :instance_name, String, name_property: true
@@ -10,9 +29,8 @@ property :install_path, String
 property :tomcat_user, String, default: lazy { |r| "tomcat_#{r.instance_name}" }
 property :tomcat_group, String, default: lazy { |r| "tomcat_#{r.instance_name}" }
 property :env_vars, Array, default: [
-  { 'CATALINA_PID' => '$CATALINA_BASE/bin/tomcat.pid' }
+  { 'CATALINA_PID' => '$CATALINA_BASE/bin/tomcat.pid' },
 ]
-property :sensitive, kind_of: [TrueClass, FalseClass], default: false
 
 action :start do
   create_init
@@ -61,10 +79,10 @@ action :disable do
   end
 end
 
-action_class.class_eval do
-  def create_init
-    ensure_catalina_base
+action_class do
+  include ::TomcatCookbook::ServiceHelpers
 
+  def create_init
     template "/etc/init/tomcat_#{new_resource.instance_name}.conf" do
       source 'init_upstart.erb'
       sensitive new_resource.sensitive
@@ -73,7 +91,7 @@ action_class.class_eval do
         user: new_resource.tomcat_user,
         group: new_resource.tomcat_group,
         instance: new_resource.instance_name,
-        env_vars: new_resource.env_vars,
+        env_vars: envs_with_catalina_base,
         install_path: derived_install_path
       )
       cookbook 'tomcat'

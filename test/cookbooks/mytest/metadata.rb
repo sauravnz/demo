@@ -1,5 +1,5 @@
-name             'demo'
-maintainer       'Demo'
+name             'mytest'
+maintainer       'Saurav'
 maintainer_email 'saurav.tech@gmail.com'
 license          'All rights reserved'
 description      'Installs/Configures demo'
@@ -8,5 +8,4 @@ version          '0.1.0'
 issues_url       'https://github.com/tonan/demo/issues'
 source_url       'https://github.com/tonan/demo'
 
-depends "java"
-depends "tomcat"
+depends "demo"

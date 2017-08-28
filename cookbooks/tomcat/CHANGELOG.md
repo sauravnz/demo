@@ -2,10 +2,45 @@
 
 This file is used to list changes made in each version of the tomcat cookbook.
 
+## 2.5.2 (2017-06-28)
+
+- Test on multiple versions of chef
+- Fix double catalina_base env vars being included if you provided you own catalina_base
+
+## 2.5.1 (2017-05-30)
+
+- Remove class_eval usage to prevent failures
+
+## 2.5.0 (2017-05-02)
+
+- Move the action_class after the actions to workaround a 12.5/12.6 bug
+- Fix HTTPS checksums add tarball_validate_ssl param
+- Use class_eval for chef 12.5/12.6 compatibility
+- Allow skipping the download of the checksum entirely for certain tarball hosting scenarios
+- Add tarball_path property, and allow for local tarballs provided outside of this resource.
+- Properly place the helper methods into a module so we don't polute the global namespace
+- Update the default Tomcat release to 8.0.43
+- Remove unnecessary configs for foodcritic and rubocop
+- Use a SPDX standard license string
+- Fix catalina_base ENV var injection for Chef 13
+- Add new `dir_mode` property to set the installation directory permission
+
+## 2.4.0 (2017-03-24)
+
+- Updated chef_version in the metadata to not fail metadata parsing on older chef clients
+- Switch to Delivery local for testing from Rake
+- Rename the Kitchen Dokken config and update the platforms we test on / config of those platforms
+- Simplify how we wire up the resources so we no longer have to specify the underlying init systems of each OS, but instead let chef determine when we're on a systemd vs. upstart vs sys-v system
+- Remvove DNF compat recipe in Test Kitchen and the need for the yum cookbook
+- Remove sensitive properties that caused deprecation warnings. Sensitive can be set on any resource and defining it in the resource is not necessary
+- Add copyright / license headers to the resources
+
 ## 2.3.4 (2016-11-28)
+
 - Set tomcat_group in service_sysv_init.rb, for issue 275
 
 ## 2.3.3 (2016-10-24)
+
 - Depend on the latest compat_resource
 - Remove a few LWRP-isms that were pointed out
 

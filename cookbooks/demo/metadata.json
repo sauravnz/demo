@@ -6,7 +6,6 @@
   "maintainer_email": "saurav.tech@gmail.com",
   "license": "All rights reserved",
   "platforms": {
-    "centos": ">= 0.0.0"
   },
   "dependencies": {
     "java": ">= 0.0.0",

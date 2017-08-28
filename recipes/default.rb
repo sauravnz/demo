@@ -10,6 +10,7 @@
 # make sure we have java installed
 include_recipe 'java'
 
+
 user 'tomcat'
 
 # put chefed in the group so we can make sure we don't remove it by managing cool_group
@@ -24,7 +25,7 @@ tomcat_install 'helloworld' do
   tomcat_user 'tomcat'
   tomcat_group 'tomcat'
 end
-
+#
 # Drop off our own server.xml that uses a non-default port setup
 cookbook_file '/opt/tomcat_helloworld/conf/server.xml' do
   source 'helloworld_server.xml'
@@ -33,7 +34,7 @@ cookbook_file '/opt/tomcat_helloworld/conf/server.xml' do
   mode '0644'
   notifies :restart, 'tomcat_service[helloworld]'
 end
-
+#
 remote_file '/opt/tomcat_helloworld/webapps/sample.war' do
   owner 'tomcat'
   mode '0644'
@@ -41,7 +42,7 @@ remote_file '/opt/tomcat_helloworld/webapps/sample.war' do
   checksum '89b33caa5bf4cfd235f060c396cb1a5acb2734a1366db325676f48c5f5ed92e5'
 end
 
-# start the helloworld tomcat service using a non-standard pic location
+# start the helloworld tomcat service using a non-standard pid location
 tomcat_service 'helloworld' do
   action [:start, :enable]
   env_vars [{ 'CATALINA_PID' => '/opt/tomcat_helloworld/bin/non_standard_location.pid' }, { 'SOMETHING' => 'some_value' }]
